@@ -1,0 +1,2 @@
+# Lucru
+ Lucru Individual Angular

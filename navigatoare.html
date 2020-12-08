@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><title>Driver</title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+    
+<body id="grad">
+<div class="container" ng-app="myApp">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>{{ title }}</h1>
+      </div>
+    </div>
+    
+    <div ui-view></div>
+    
+  </div>
+  
+  <script type="text/ng-template" id="login.html">
+    <div class="col-md-12">
+      <h3>Please Login to continue</h3>
+      
+      <form ng-submit="formSubmit()" class="form">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
+          </div> 
+
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Login</button>
+            <span class="text-danger" id="err">{{ error }}</span>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </script>	
+  
+
+ <script type="text/ng-template" id="home.html"><!-- inceputul paginii home, poti pune ce vrei aici-->
+    <div class="col-md-12">
+	<h3></h3>
+    
+	<header>
+      <img src="Images/basic.jpg" style="height:100px;padding-top: 5px; padding-left: 550px; padding-bottom: 10px;" alt="Imagine logo" align="middle"> 
+    
+    </header>
+	
+
+	
+	
+	
+ 
+    
+    <div class="topnav">
+  <a href="web.html"><i class="fa fa-home"> Home</i></a>
+        
+        
+        <div class="dropdown">
+    <button class="dropbtn">Produse 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="active" href="navigatoare.html">Navigatoare - GPS</a>
+      <a  href="video.html">Video - Inregistratoare</a>
+      <a href="multimedia.html">Multimedia - Auto</a>
+      <a href="radar.html">Detectoare - Radar</a>
+      <a href="camera.html">Camera - Video</a>
+    </div>
+  </div> 
+
+  <a href="noutati.html">Noutati</a>
+  <a href="noi.html">Despre noi</a>
+  <a  href="cum ne gasiti.html">Contacte</a>
+  <a href="livrare.html">Livrare Online</a>
+ 
+        
+        
+        
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" ng-model='verify'  placeholder="Cauta">
+      
+    </form>
+  </div>
+</div>
+    
+    
+<br /> 
+    
+<div class="container">
+
+<div ng-repeat="x in names | filter:verify ">
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="navigatoare.html">
+      <img src="{{x.photo}}" alt="video reg" >
+    </a>
+    <div class="desc"><b>{{x.name}}</b>
+      <p>{{x.desc}}</p>
+      <b>{{x.price | currency:"MDL"}}</b></div>
+  </div>
+</div>
+</div>		
+
+<!--
+    
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav1.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer 50 D</b>
+      <p>Navigator Pioneer 50 D este echipat cu un ecran de 5 inch cu o rezoluție înaltă de 800x480 px. Aceasta este rezoluția o..</p>
+      <b>1.120,00 MDL</b></div>
+  </div>
+</div>
+    
+    
+
+    
+    <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav2.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer 5730</b>
+      <p>GPS navigatorul - este un model al anului 2018. Dispozitivul este echipat cu un display de 5 inci, care vă permite să vă..</p>
+      <b>1.200,00 MDL</b></div>
+  </div>
+</div>
+    
+    
+      <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav3.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer HD-701 </b>
+      <p>Auto GPS Navigator, care vă va permite să procesați rapid coordonatele receptorului GPS. Capacitatea RAM Pioneer HD-701 ..</p>
+      <b>1.267,00 MDL</b></div>
+  </div>
+</div>
+    
+    
+      <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav4.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer 50 G</b>
+      <p>Navigator Pioneer 50 G este echipat cu un ecran de 5 inch cu o rezoluție înaltă de 800x480 px Aceasta este rezoluția op..</p>
+      <b>1.320,00 MDL</b></div>
+  </div>
+</div>  
+    
+     <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav7.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer 7040B</b>
+      <p>GPS navigatorul - este un model al anului 2017. Dispozitivul este echipat cu un display de 7 inci, care vă permite să vă..</p>
+      <b>1.320,00 MDL</b></div>
+  </div>
+</div>  
+    
+       <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav8.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer HD 7012 </b>
+      <p>GPS navigatorul - este un model al anului 2017. Dispozitivul este echipat cu un display de 7 inci, care vă permite să vă..</p>
+      <b>1.450,00 MDL</b></div>
+  </div>
+</div>
+    
+     <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav7.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer HD 70N </b>
+      <p>Video Recorder Lauf VR02 1920x1080 Specificații tehnice Lauf VR02 1920x1080 Senzor de imagine Sunplus 7670 Camera 0..</p>
+      <b>378,00 MDL</b></div>
+  </div>
+</div>
+    
+     <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="video.html">
+      <img src="Images/nav9.jpg" alt="video reg" >
+    </a>
+    <div class="desc"><b>Pioneer D 7099</b>
+      <p>GPS navigatorul - este un model al anului 2018. Dispozitivul este echipat cu un display de 7 inci, care vă permite să vă..</p>
+      <b>1.550,00 MDL</b></div>
+  </div>
+</div> 
+    
+    -->
+    
+    </div>
+    
+
+<div class="clearfix"></div>
+    
+
+</div>
+	  
+	   
+      <a ui-sref="login">Back</a>
+  </script><!-- sfirsitul paginii home -->
+    
+     </div> 
+<link rel="stylesheet" href="CSS Code/css1.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
+<script src="engine.js"></script>
+</body>
+</html>

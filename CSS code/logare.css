@@ -1,0 +1,145 @@
+@font-face {
+    font-family: Jua;
+    src: url("../fonts/Jua-Regular.ttf");
+}
+body {
+    background-color: #333;
+    width: auto;
+    height: 100%;
+    padding: 20%;
+    
+}
+.col-md-12 {
+    color: #f29a44;
+    font-family: Jua, sans-serif;
+    padding: auto 20%;
+    font-size:100%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-align: center;
+    }
+form {
+	width: 50%;
+	height: 50%;
+	margin-left:25%;
+	color: #f29a44;
+	font-family: Jua, sans-serif;
+	font-size:150%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  #err{color: #FF0000;}
+.c,.c1{margin-right: 0%;} 
+ .meniu {box-shadow:3px 5px 3px #333;
+			width: 60%; 
+			 
+			background: #f29a44; 
+            margin-left: 20%;
+            margin-right: 20%;
+           
+}
+
+.meniu ul li{
+            max-width:135px;
+            border: 1px none;
+			list-style: none;
+			display: inline-block;
+			font-family: Jua, sans-serif;
+            margin-left: 5px;
+            border-bottom-width: 0px;
+}
+
+.meniu ul li:first-child{	padding-left:100px; 	}
+
+.meniu ul li:last-child{    padding-right:100px; 	}
+
+.meniu ul li a{
+			text-decoration: none; 
+			display: block; 
+			padding: 5px 10px; 
+			margin: 5px;
+			color: #FFFFFF; 
+			vertical-align: middle;	}
+
+.meniu ul li a:hover{
+			box-shadow:3px 5px 3px #333;
+			
+            color: #333;
+            }
+
+
+@media screen and (max-width:1215px) {
+  .meniu ul li:first-child{	padding-left:10%; 	}
+  .meniu ul li:last-child{    padding-right:10%; 	}
+}
+@media screen and (min-width:1265px){
+    .meniu ul li{margin-left: 20px;} 
+}
+@media screen and (max-width:1091px) {
+    .meniu ul li{ margin-left: 2px;}
+    .meniu ul li:last-child{    padding-right:10px; 	}
+
+}
+
+@media screen and (max-width:968px) {
+        .meniu ul li{ margin-left: 0px;}
+}
+@media screen and (max-width:925px) {
+    .c{margin-right: 0%;}  
+    .meniu ul li:first-child{	padding-left:0%; 	}
+    .meniu ul li:last-child{    padding-right:0%; 	}
+}
+@media screen and (max-width:870px) {
+    .c{margin-right: 0%;}}
+.meniu ul li:last-child{    padding-right:0px; 	}
+@media screen and (max-width:756px) {
+    .meniu ul li{
+				border-bottom: 2px black ridge;
+    border-bottom-width: 2px;} 
+   /* c1,.c{margin-right: -40%;}*/
+    .meniu{margin-left: 0%;width:80%;margin-right: 0;padding-left: 20%}
+}
+@media screen and (max-width:695px) {
+          .meniu ul li:first-child{	padding-left:0% ; 	}
+    .meniu{margin-left: 0%;width:90%;margin-right: 0;padding-left: 10%}
+}
+@media screen and (max-width:540px) {
+  .meniu ul li:first-child{	padding-left:0% ; 	}
+     .meniu{margin-left: 0%;width:95%;margin-right: 0;padding-left: 5%}
+    .meniu ul li:last-child{    padding-right:0%; 	}
+}
+    @media screen and (max-width:485px) {
+     .c1{margin-right: 30%;}
+        .meniu ul li{
+			display: block;	}
+        .meniu {width:85%;box-shadow:3px 5px 3px #333;
+        margin-left: 0;padding-left: 14%;margin-right: 0;}
+        .menu ul {padding: 0px; margin: 0px;}
+       /* ul    {padding: 0em;box-shadow:3px 5px 3px #333;}*/
+    }
